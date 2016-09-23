@@ -1,0 +1,12 @@
+{{link-to "Secret codez here" 'secret'}}
+
+<h2> Login page </h2>
+<p> User login / ok </p>
+
+<form {{action 'authenticate' on='submit'}}>
+
+  {{input value=email placeholder='Email'}} <br>
+  {{input value=password placeholder='Password' type='password'}} <br>
+  <button type="submit"> Login </button>
+
+</form>
