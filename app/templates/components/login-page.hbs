@@ -1,4 +1,6 @@
-{{link-to "Secret codez here" 'secret'}}
+{{#if authManager.currentUser}}
+  Logged in as {{authManager.currentUser.email}}
+{{ else }}
 
 <h2> Login page </h2>
 <p> User login / ok </p>
@@ -10,3 +12,7 @@
   <button type="submit"> Login </button>
 
 </form>
+
+{{/if}}
+
+{{#link-to 'secret'}}<strong>Secret codez here</strong>{{/link-to}}
