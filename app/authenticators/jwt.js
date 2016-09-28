@@ -6,7 +6,7 @@ import config from '../config/environment';
 
 var host = config.apiBaseUrl,
 namespace = 'v0',
-loginUrl = [ host, namespace, 'auth/login'].join('/');
+loginUrl = [ host, namespace, 'auth/adminLogin'].join('/');
 
 
 export default Base.extend({
@@ -33,6 +33,19 @@ export default Base.extend({
             });
         });
     },
+
+    restore: function (data){
+        return new Ember.RSVP.Promise(function(resolve,reject) {
+            if (!Ember.isEmpty(data.token)){
+              resolve(data);
+            }else {
+              reject();
+
+            }
+        });
+
+    },
+
     invalidate: function (data) {
         console.log('invalidate', data);
     }
