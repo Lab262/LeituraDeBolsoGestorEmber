@@ -1,6 +1,9 @@
-import Model from 'ember-data/model';
-import attr from 'ember-data/attr';
+import DS from 'ember-data';
+//import attr from 'ember-data/attr';
 
-export default Model.extend({
-  title: attr('string'),
+export default DS.Model.extend({
+  title: DS.attr('string'),
+  authorName: DS.attr('string'),
+  content: DS.attr('string'),
+  timeToReadInMinutes: DS.attr('number')
 });
