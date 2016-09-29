@@ -20,7 +20,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.apiBaseUrl = 'http://192.168.0.14:8080/api'
+    ENV.apiBaseUrl = 'https://leituradebolso.herokuapp.com/api'
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;

@@ -9,7 +9,7 @@ export default Base.extend({
     const  accessToken  = data.token;
     if (this.get('session.isAuthenticated') && !Ember.isEmpty(accessToken)) {
       block(
-      'x-access-token', accessToken
+      'x-access-token', accessToken,  'Content-type', 'application/json'
           );
    }
   }
