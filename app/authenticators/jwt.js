@@ -19,7 +19,10 @@ export default Base.extend({
                 data: {
                     email: email,
                     password: password
-                    },
+                  },
+                  headers: {
+          'Content-Type': 'application/json'
+          },
                 dataType: 'json'
             }).then(function(response/*, statusText, jqXHR*/) {
                 Ember.run(function() {
