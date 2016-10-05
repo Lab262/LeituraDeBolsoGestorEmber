@@ -1,16 +1,9 @@
 
-table, th, td {
-    border: 0.5px solid black;
-}
+@import 'components/color';
 
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    padding-left:40px;
-}
-.button3 {border-radius: 8px;}
+// Custom color settings go here
+$primary-color: color("pink", "lighten-2");
+
+@import 'components/variables';
+@import 'materialize';
+@import 'ember-cli-materialize';
