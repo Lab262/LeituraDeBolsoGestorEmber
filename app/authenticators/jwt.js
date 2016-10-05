@@ -16,14 +16,12 @@ export default Base.extend({
             Ember.$.ajax({
                 url: loginUrl,
                 type: 'POST',
-                data: {
+                contentType: "application/json;charset=utf-8",
+                dataType: 'json',
+                data: JSON.stringify({
                     email: email,
                     password: password
-                  },
-                  headers: {
-          'Content-Type': 'application/json'
-          },
-                dataType: 'json'
+                  })
             }).then(function(response/*, statusText, jqXHR*/) {
                 Ember.run(function() {
                   resolve({ token : response.token });
