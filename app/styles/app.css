@@ -7,3 +7,28 @@ $primary-color: color("pink", "lighten-2");
 @import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
+<style type="text/css">
+.footer-test
+{
+    position: absolute;
+    left: 100;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-color: #00ff00;
+}
+th, td {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+</style>

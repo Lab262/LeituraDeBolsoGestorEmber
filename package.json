@@ -51,7 +51,7 @@
     "ember-truth-helpers": "1.2.0",
     "ember-welcome-page": "^1.0.1",
     "loader.js": "^4.0.1",
-    "node-sass": "3.4.2"
+    "node-sass": "3.10.1"
   },
   "dependencies": {
     "ember-cli-sass": "^5.5.2"
