@@ -21,13 +21,23 @@ th, td {
     border: 1px solid black;
     overflow: hidden;
     width: 100px;
+     text-align: left;
+
+
 }
+.cth{
+  background-color: #4CAF50;
+  color: white;
+}
+
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
-
+table {
+    width: 100%;
+}
 main {
   flex: 1 0 auto;
 }
