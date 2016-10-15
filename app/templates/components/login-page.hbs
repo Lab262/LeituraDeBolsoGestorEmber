@@ -1,6 +1,13 @@
+<div class="teal">
+
+<div class="container">
+
 {{#if authManager.currentUser}}
   Logged in as {{authManager.currentUser.email}}
 {{ else }}
+
+
+        <!-- Page Content goes here -->
 
 <h2> Login page </h2>
 <p> User login / ok </p>
@@ -13,6 +20,10 @@
 
 </form>
 
+
 {{/if}}
 
 {{#link-to 'secret'}}<strong>Secret codez here</strong>{{/link-to}}
+
+</div>
+</div>

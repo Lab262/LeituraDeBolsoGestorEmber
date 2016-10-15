@@ -1,13 +1,13 @@
 
 @import 'components/color';
 
-// Custom color settings go here
-$primary-color: color("pink", "lighten-2");
+/*// Custom color settings go here*/
+/*$primary-color: color("pink", "lighten-2");*/
 
 @import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
-<style type="text/css">
+/*<style type="text/css">
 .footer-test
 {
     position: absolute;
@@ -41,4 +41,4 @@ table {
 main {
   flex: 1 0 auto;
 }
-</style>
+</style>*/
