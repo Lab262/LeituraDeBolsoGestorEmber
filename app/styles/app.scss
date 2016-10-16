@@ -1,5 +1,72 @@
 // Fix for Roboto font path
 $roboto-font-path: '../assets/';
 
-// Materialize styles
-@import "materialize";
+@import 'components/color';
+
+/*// Custom color settings go here*/
+$main-background-color: color("grey", "darken-3");
+$main-text-color: white;
+$form-autofill-text-color: rgba(white, 0.8);
+
+@import 'components/variables';
+@import 'materialize';
+@import 'ember-cli-materialize';
+
+html {
+  background-color: $main-background-color;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: $main-text-color;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0px solid white;
+  -webkit-text-fill-color: $form-autofill-text-color;
+  -webkit-box-shadow: 0 0 0px 0px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-bottom: 0.5px solid #fff;
+}
+
+.form {
+  // background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .field {
+    text-align: left;
+    width: 70%;
+    .input-field input[type=text]:focus {
+     border-bottom: 1px solid #000;
+     box-shadow: 0 1px 0 0 #000;
+   }
+  }
+
+  .button {
+    margin-top: 25px;
+    width: 50%;
+  }
+
+  h5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+}
+.login-page {
+  display: flex;
+  text-align: center;
+
+}

@@ -1,29 +1,22 @@
-<div class="teal">
+<div class="form">
 
-<div class="container">
+  <h5>Leitura de Bolso Gestor</h5>
 
-{{#if authManager.currentUser}}
-  Logged in as {{authManager.currentUser.email}}
-{{ else }}
+  {{md-input
+    value=email
+    label='Email'
+    class="field"
+    validate=true}}
 
+    {{md-input
+      value=password
+      label='Password'
+      type="password"
+      class="field"
+      validate=true}}
 
-        <!-- Page Content goes here -->
+      {{md-btn text='Entrar'
+      action='authenticate'
+      class="button"}}
 
-<h2> Login page </h2>
-<p> User login / ok </p>
-
-<form {{action 'authenticate' on='submit'}}>
-
-  {{input value=email placeholder='Email'}} <br>
-  {{input value=password placeholder='Password' type='password'}} <br>
-  <button type="submit"> Login </button>
-
-</form>
-
-
-{{/if}}
-
-{{#link-to 'secret'}}<strong>Secret codez here</strong>{{/link-to}}
-
-</div>
-</div>
+    </div>
