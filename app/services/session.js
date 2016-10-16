@@ -8,8 +8,6 @@ export default ESASession.extend({
 
   currentUser: Ember.computed('isAuthenticated', function() {
 
-    console.log("PASSEI AUTHENTICE")
-
     if (this.get('isAuthenticated')) {
 
       const promise = this.get('store').queryRecord('user', {});

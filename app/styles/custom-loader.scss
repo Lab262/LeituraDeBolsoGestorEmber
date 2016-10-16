@@ -6,7 +6,11 @@
    bottom: 0;
    right: 0;
    background-size: cover;
-   background-color: rgba(0,0,0,0.75);
+   background-color: rgba(0,0,0,0.9);
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+
    img {
       margin: 0;
       position: absolute;
