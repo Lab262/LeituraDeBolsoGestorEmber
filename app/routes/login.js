@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 
     beforeModel: function(transition) {
     if (this.get('session.isAuthenticated')) {
-      return this.transitionTo('secret');
+      return this.transitionTo('dashboard');
     }
   }
 });

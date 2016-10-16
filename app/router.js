@@ -11,7 +11,7 @@ $(document).ready(function(){
   });
 });
 Router.map(function() {
-  this.route('secret', {
+  this.route('dashboard', {
     path: '/'
   });
   this.route('login');

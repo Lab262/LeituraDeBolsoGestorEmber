@@ -47,7 +47,13 @@ export default Base.extend({
     },
 
     invalidate: function (data) {
-        console.log('invalidate', data);
+      return new Ember.RSVP.Promise(function(resolve,reject) {
+          if (!Ember.isEmpty(data.token)){
+            resolve(data);
+          }else {
+            reject();
+          }
+      });
     }
 
 });
