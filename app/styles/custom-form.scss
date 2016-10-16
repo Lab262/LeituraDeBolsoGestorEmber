@@ -1,0 +1,61 @@
+.form {
+  position: auto;
+  margin: auto;
+  width: 75%;
+  padding: 10px;
+  margin-top: 5%;
+
+  // background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // /* valid color */
+  // .input-field input[type=text].valid {
+  //   border-bottom: 0.5px solid green;
+  //   box-shadow: 0 0.5px 0 0 green;
+  // }
+  // /* invalid color */
+  // .input-field input[type=text].invalid {
+  //   border-bottom: 1px solid black;
+  //   box-shadow: 0 1px 0 0 black;
+  // }
+
+
+  .field {
+    text-align: left;
+    margin-bottom: 50px;
+    // background-color: white;
+    width: 70%;
+
+  }
+
+  .button {
+    margin-top: 25px;
+    width: 50%;
+  }
+
+  h5 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0px solid white;
+  -webkit-text-fill-color: $form-autofill-text-color;
+  -webkit-box-shadow: 0 0 0px 0px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
+  border-bottom: 0.5px solid white;
+}

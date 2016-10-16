@@ -6,17 +6,26 @@
     value=email
     label='Email'
     class="field"
-    validate=true}}
+    validate=true
+    errors=errors.email}}
 
     {{md-input
       value=password
       label='Password'
       type="password"
       class="field"
-      validate=true}}
+      validate=true
+      errors=errors.password}}
 
       {{md-btn text='Entrar'
       action='authenticate'
       class="button"}}
 
+
     </div>
+
+    {{#if isLoading}}
+      <div class="custom-loader">
+        {{md-loader mode="circular" class="loader"}}
+      </div>
+    {{/if}}

@@ -27,7 +27,6 @@ export default Base.extend({
                   resolve({ token : response.token });
                 });
             }, function(jqXHR/*, textStatus, errorThrown*/) {
-
                 Ember.run(function() {
                     reject(jqXHR);
                 });

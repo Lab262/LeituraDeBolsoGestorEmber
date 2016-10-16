@@ -1,4 +1,4 @@
-<div class="login-page">
+<div class="login-form">
   <div class="container">
 
     {{#if authManager.currentUser}}
@@ -6,12 +6,10 @@
     {{ else }}
 
 
-    {{login-page}}
-    
+    {{login-form}}
+
 
     {{/if}}
-
-    {{#link-to 'secret'}}<strong>Secret codez here</strong>{{/link-to}}
 
   </div>
 </div>
