@@ -1,23 +1,99 @@
-/* Large */
-.navigation {
-  display: flex;
-  flex-flow: row wrap;
-  /* This aligns items to the end line on main-axis */
-  justify-content: flex-end;
-}
 
-/* Medium screens */
-@media all and (max-width: 800px) {
-  .navigation {
-    /* When on medium sized screens, we center it by evenly distributing empty space around items */
-    justify-content: space-around;
-  }
-}
+$font-color: white;
+$nav-bar-height: 75px;
+$items-container-padding-height: 1%;
+$items-padding-width: 15px;
+$items-padding-height: 3%;
+// //original selectors
+// //.navbar .app-menu .our-team, .navbar .app-menu .advertise, .navbar .app-menu .partners
+// %extend_2 {
+// 	padding: 0 $items-padding-width);
+// 	border-right: $items-border-size) solid $font-color;
+// 	height: 50%;
+// }
 
-/* Small screens */
-@media all and (max-width: 500px) {
-  .navigation {
-    /* On small screens, we are no longer using row direction but column */
-    flex-direction: column;
-  }
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	background: rgba(0,0,0,0.75);
+	justify-content: space-between;
+  margin-top: 0;
+
+	.app-menu {
+		font-color: $font-color;
+		color: $font-color;
+    // background: black;
+		a, button{
+			vertical-align: middle;
+			position: relative;
+			display: block;
+			padding: 1.2em;
+      background: rgba(0,0,0,0);
+      border: none;
+
+			&:visited {
+				color: $font-color;
+				text-decoration: none;
+			}
+			&:link {
+				color: $font-color;
+				text-decoration: none;
+			}
+			&:hover {
+        background: rgba(0,0,0,0.75);
+			}
+			&:active {
+        background: rgba(0,0,0,0.75);
+			}
+		}
+
+    button {
+      margin-left: auto;
+      position: absolute;
+      right: 0;
+      top: 0;
+      vertical-align: middle;
+    }
+	}
+}
+@media screen and(min-width: 400px) {
+	.navbar .app-menu {
+		display: flex;
+		height: $nav-bar-height;
+		align-items: center;
+		a, button {
+			line-height: calc(#{$nav-bar-height}/2);
+		}
+
+		.nav-buton {
+			padding: 0 $items-padding-width;
+		}
+	}
+}
+@media screen and(max-width: 400px) {
+	.navbar {
+		justify-content: center;
+		flex-direction: column;
+		.app-menu {
+			flex-direction: column;
+			padding-top: 10px;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+      button {
+        position: relative;
+        top: 0;
+        right: 25px;
+
+        vertical-align: middle;
+      }
+			a, button {
+				// border-top: calc(#{$items-border-size}/2) solid $font-color;
+				// padding: calc(#{$items-padding-height} * 5) $items-padding-width;
+			}
+		}
+	}
 }

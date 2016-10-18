@@ -1,6 +1,16 @@
-<ul class="navigation">
-  <li>{{#link-to "dashboard"}}Leituras{{/link-to}}</li>
-  <li>{{#link-to "dashboard"}}Usuários{{/link-to}}</li>
-  <li>{{#link-to "dashboard"}}Calculadora{{/link-to}}</li>
-  <button {{action "logout"}}>Sair</button>
+<ul class="navbar">
+  <div class="app-menu">
+  <div class="nav-button">
+      <li>{{#link-to "dashboard"}}Leituras{{/link-to}}</li>
+  </div>
+  <div class="nav-button">
+    <li>{{#link-to "dashboard"}}Usuários{{/link-to}}</li>
+  </div>
+  <div class="nav-button">
+    <li>{{#link-to "dashboard"}}Calculadora{{/link-to}}</li>
+  </div>
+  <div class="nav-button">
+    <button {{action "logout"}}>Sair</button>
+  </div>
+</div>
 </ul>
