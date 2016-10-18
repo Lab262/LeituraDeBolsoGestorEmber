@@ -1,0 +1,14 @@
+.collection-view-container {
+  background: green;
+
+  display: flex;
+  flex-flow: row wrap;
+
+  position: relative;
+  margin: auto;
+
+  width: 80%;
+  height: auto;
+  min-height: 75vh;
+
+}

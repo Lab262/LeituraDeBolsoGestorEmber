@@ -18,6 +18,10 @@ $form-autofill-text-color: rgba(white, 0.8);
 @import 'custom-loader.scss';
 @import 'custom-form.scss';
 @import 'custom-navbar';
+@import 'dashboard-container';
+@import 'collection-view-container';
+@import 'searchbar-container';
+@import 'collection-card-reading-item';
 
 // General scss
 html {
