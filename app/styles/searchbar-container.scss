@@ -1,10 +1,24 @@
 .searchbar-container {
-    background: red;
     display: block;
     position: relative;
     margin: auto;
 
     width: 80%;
     height: 125px ;
+    // align-items: center;
+    // vertical-align: center;
+    .search-input {
+
+      input[type=text] {
+        border-bottom: 0px solid black;
+        box-shadow: 0 0px 0 0 black;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
     // height: 80vh;
 }

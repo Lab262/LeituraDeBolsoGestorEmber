@@ -1,6 +1,4 @@
-$font-size: 15px;
 $line-height: 1.4;
-$lines-to-show: 8;
 
 .collection-card-reading-item {
   position: relative;
@@ -9,7 +7,13 @@ $lines-to-show: 8;
   height: 400px;
   margin: 10px;
 
-  background: yellow;
+  background-color: white;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+
+  -webkit-box-shadow: 0px 0px 65px 4px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 65px 4px rgba(0,0,0,1);
+  box-shadow: 0px 0px 65px 4px rgba(0,0,0,1);
 
   text-align: left;
   color: black;
@@ -38,31 +42,28 @@ $lines-to-show: 8;
   .reading-item-title {
     @extend %extended_padding;
     height: 15%;
-
     -webkit-line-clamp: 2 ;
     @extend %extended_linebreak;
-
-    background: gray;
+    font-size: 18px;
   }
 
   .reading-item-author {
     @extend %extended_padding;
     height: 10%;
-
+    color: gray;
+    font-size: 14px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 
-    background: gray;
   }
 
   .reading-item-content {
     @extend %extended_padding;
     height: 65%;
-    background: blue;
 
     span{
-      -webkit-line-clamp: 8 ;
+      -webkit-line-clamp: 11;
       @extend %extended_linebreak;
     }
     // white-space: nowrap;
@@ -71,6 +72,24 @@ $lines-to-show: 8;
   .reading-item-actions {
     @extend %extended_padding;
     height: 10%;
+    display: block;
+    background-color: rgba(0,0,255,0.05);
+
+    .delete-button {
+      color: red;
+      position: absolute;
+      right: 15px;
+      top: 95%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0);
+      border: none;
+    }
+    .checkbox {
+      color: black;
+      position: absolute;
+      top: 95%;
+      transform: translateY(-50%);
+    }
   }
 
 }
