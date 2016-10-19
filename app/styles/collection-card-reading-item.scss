@@ -1,16 +1,76 @@
+$font-size: 15px;
+$line-height: 1.4;
+$lines-to-show: 8;
+
 .collection-card-reading-item {
-
-  display: block;
-
-  width: 100px;
-  height: 100px;
-
-  margin: 50px;
+  position: relative;
+  display: inline-block;
+  width: 340px;
+  height: 400px;
+  margin: 10px;
 
   background: yellow;
-  position: relative;
 
-  // padding: 50px;
+  text-align: left;
+  color: black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -moz-binding: url('assets/xml/ellipsis.xml#ellipsis');
 
+  %extended_padding {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  };
+
+  %extended_linebreak {
+    max-width: 100%;
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+      line-height: $line-height;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  .reading-item-title {
+    @extend %extended_padding;
+    height: 15%;
+
+    -webkit-line-clamp: 2 ;
+    @extend %extended_linebreak;
+
+    background: gray;
+  }
+
+  .reading-item-author {
+    @extend %extended_padding;
+    height: 10%;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    background: gray;
+  }
+
+  .reading-item-content {
+    @extend %extended_padding;
+    height: 65%;
+    background: blue;
+
+    span{
+      -webkit-line-clamp: 8 ;
+      @extend %extended_linebreak;
+    }
+    // white-space: nowrap;
+  }
+
+  .reading-item-actions {
+    @extend %extended_padding;
+    height: 10%;
+  }
 
 }
