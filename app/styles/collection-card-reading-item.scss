@@ -90,6 +90,15 @@ $line-height: 1.4;
       top: 95%;
       transform: translateY(-50%);
     }
+    .card-item-select-button {
+      position: absolute;
+      background-color: rgba(0,0,0,0.01);
+       z-index: 999;
+       top: 0;
+       left: 0;
+       height:90%;
+       width: 100%;
+    }
   }
 
 }
