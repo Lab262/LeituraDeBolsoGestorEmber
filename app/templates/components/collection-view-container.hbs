@@ -1,6 +1,6 @@
 
 <div class="collection-view-container">
-  {{#each readings as |reading|}}
-    {{collection-card-reading-item}}
+  {{#each model as |reading|}}
+    {{collection-card-reading-item model=reading}}
   {{/each}}
 </div>

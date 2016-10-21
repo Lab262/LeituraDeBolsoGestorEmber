@@ -1,23 +1,28 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  reading : {'Title': 'agora foi', 'Author': 'Nois', 'Content' : 'Agora foi uai carai'},
 
   actions: {
-    debug: function(reading) {
+    editReading: function() {
 
-      console.log(reading);
+      console.log(this.model);
       console.log('vai');
 
     },
 
-    toggleBody: function(reading) {
-      console.log(reading);
-      console.log('delete');
+    deleteReading: function() {
+      if (confirm('Você tem certeza que quer deletar essa leitura???')) {
+        this.model.destroyRecord().then(() => {
+        }).catch((reason) => {
+          alert(reason);
+        });
+      }
     },
 
-    changeReadingOfTheWeek: function(isChecke) {
-      console.log(this.reading);
+    changeReadingOfTheDay: function(isChecke) {
+      console.log(this.model);
+      this.model.set('readOfTheDay',true);
+      this.model.save();
       console.log('foi');
     }
   }

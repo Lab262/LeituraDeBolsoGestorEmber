@@ -1,11 +1,11 @@
 <div class="collection-card-reading-item">
-  <div class="reading-item-title"> Título 😀😀😀 ítulo 😀😀😀ítulo 😀😀😀ítulo 😀😀😀ítulo 😀😀😀 Autor e sobrenomeAutor e sobrenomeAutor e sobrenomeAutor e sobrenome</div>
-  <div class="reading-item-author"> Autor e sobrenome Autor e sobrenomeAutor e sobrenomeAutor e sobrenomeAutor e sobrenome </div>
-  <div class="reading-item-content"> <span>Conteúdo ipsum dolor sit ametonteúdo ipsum dolor sit ametonteúdo ipsum dolor sit ametonteúdo ipsum dolor sit ametonteúdo ipsum dolor sit amet,Conteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit ametConteúdo ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmodssddd tempor incididunt ut labore et dolore magna wirl aliqua. Up exlaborum incididunt. </span></div>
+  <div class="reading-item-title"> {{model.title}}</div>
+  <div class="reading-item-author"> {{model.authorName}} </div>
+  <div class="reading-item-content"> <span> {{model.content}} </span></div>
   <div class="reading-item-actions">
-    {{md-check name="Leitura da semana" checked=checkboxIsSelected class="checkbox" action='changeReadingOfTheWeek' actionArg=reading}}
-    <button {{action "toggleBody" actionArg=reading}} class="delete-button">Deletar</button>
-    {{md-btn action='debug' actionArg=reading  class='card-item-select-button' }}
+    {{md-check name="Leitura do dia" checked=model.readOfTheDay class="checkbox" action='changeReadingOfTheDay'}}
+    <button {{action "deleteReading"}}  class="delete-button">Deletar</button>
+    {{md-btn action='editReading'  class='card-item-select-button' }}
   </div>
 
 </div>
