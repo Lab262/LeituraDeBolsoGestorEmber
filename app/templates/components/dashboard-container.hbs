@@ -1,4 +1,13 @@
+
 <div class="dashboard-container">
+  {{md-btn text='Cadastrar nova leitura'
+  action='registerNewReading'
+  class="register-button"}}
 {{searchbar-container}}
 {{collection-view-container model=model}}
+
+{{#if readingFormModal.isShowing}}
+    {{register-reading-modal closeModalAction=(action closeModal) isNewReading=readingFormModal.isNewReading}}
+{{/if}}
+
 </div>

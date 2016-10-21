@@ -1,0 +1,25 @@
+{{#md-modal close='closeModal' class="form-modal"}}
+    <div class="reading-form">
+      <div class="reading-form-fields">
+
+        {{md-input value="I love material design."
+ label='Example with color specification'
+ icon="mdi-action-android light-blue-text"
+ class="col s12"
+ validate=true}}
+
+      </div>
+      <div class="reading-form-actions">
+
+        {{md-btn text='Cancelar'
+        action='closeModal'
+        class="register-button"}}
+
+        {{md-btn text='Cadastrar nova leitura'
+        action='submitForm'
+        class="submit_button"}}
+
+      </div>
+    </div>
+
+{{/md-modal}}
