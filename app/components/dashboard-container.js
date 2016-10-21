@@ -1,22 +1,24 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  readingFormModal: {isShowing: false, isNewReading: false},
+
+  isNewReading: false,
 
   closeModal() {
-    this.set('readingFormModal.isShowing',false)
+    $('#reading-form-modal').closeModal();
 
   },
 
   actions: {
 
     registerNewReading() {
-      this.set('readingFormModal.isShowing',true)
-      this.set('readingFormModal.isNewReading',true)
+      this.set('isNewReading',true)
+
+      $('#reading-form-modal').openModal();
+
     },
     editAReading() {
-      this.set('readingFormModal.isShowing',true)
-      this.set('readingFormModal.isNewReading',false)
+      this.set('isNewReading',false)
     }
 
   },

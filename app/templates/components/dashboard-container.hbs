@@ -6,8 +6,7 @@
 {{searchbar-container}}
 {{collection-view-container model=model}}
 
-{{#if readingFormModal.isShowing}}
-    {{register-reading-modal closeModalAction=(action closeModal) isNewReading=readingFormModal.isNewReading}}
-{{/if}}
+    {{register-reading-modal closeModalAction=(action closeModal) isNewReading=readingFormModal.isNewReading class="register-reading-modal"}}
+
 
 </div>
