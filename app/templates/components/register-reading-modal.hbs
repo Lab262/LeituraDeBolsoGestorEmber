@@ -1,9 +1,47 @@
-<div id="reading-form-modal" class="modal bottom-sheet">
+<div id="reading-form-modal" class="modal modal-fixed-footer">
   <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
+
+    {{md-input
+      value=title
+      label='Título'
+      class="field"
+      validate=true
+      errors=errors.title}}
+
+      {{md-input
+        value=author
+        label='Autor'
+        class="field"
+        validate=true
+        errors=errors.author}}
+
+        {{md-textarea
+          label='Conteúdo'
+          value=content
+          class="text-area"
+          validate=true
+          errors=errors.content}}
+
+          {{md-select
+            content=readingTypes
+            value=readingSelectedType
+            label="Tipo de Leitura"
+            optionValuePath="content"
+            class="select-field"
+            selection="changeReadingType"}}
+
+            <div class="reading-time">
+              Tempo de leitura
+              <div class="reading-time-value">{{readingTime}} segundos</div>
+            </div>
+
+
+            {{md-check name="Leitura do dia" checked=model.readOfTheDay class="checkbox"}}
+
+
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class="modal-action submit-form waves-effect waves-green btn-flat" {{action "submitForm"}}>Cadastrar</a>
+            <a href="#!" class="modal-action close-modal waves-effect waves-green btn-flat" {{action "closeModal"}}>Cancelar</a>
+          </div>
+        </div>

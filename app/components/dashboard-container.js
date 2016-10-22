@@ -13,11 +13,11 @@ export default Ember.Component.extend({
 
     registerNewReading() {
       this.set('isNewReading',true)
-
       $('#reading-form-modal').openModal();
 
     },
     editAReading() {
+
       this.set('isNewReading',false)
     }
 
