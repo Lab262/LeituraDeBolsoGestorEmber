@@ -37,8 +37,8 @@ export default Ember.Component.extend({
       }, (err) => {
         const errors = this.get('errors');
         this.set('isLoading', false);
-        var errorObject = err.responseJSON.errors[0]
-        var errorAttrbitue = errorObject.source.pointer.substring(16)
+        var errorObject = err.responseJSON.errors[0];
+        var errorAttrbitue = errorObject.source.pointer.substring(16);
         errors.set(errorAttrbitue, [errorObject.detail]);
       });
     }

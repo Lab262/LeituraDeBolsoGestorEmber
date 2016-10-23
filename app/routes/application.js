@@ -4,7 +4,7 @@ import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mi
 export default Ember.Route.extend(ApplicationRouteMixin, {
 
   actions: {
-    error: function(reason, transition) {
+    error: function() {
       this.transitionTo('/login');
       return false;
     }

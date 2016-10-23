@@ -5,25 +5,18 @@ export default Ember.Component.extend({
   actions: {
     editReading: function() {
 
-      console.log(this.model);
-      console.log('vai');
-
+      this.editReadingAction(this.model);
     },
 
     deleteReading: function() {
       if (confirm('Você tem certeza que quer deletar essa leitura???')) {
-        this.model.destroyRecord().then(() => {
-        }).catch((reason) => {
-          alert(reason);
-        });
+        this.model.destroyRecord();
       }
     },
 
-    changeReadingOfTheDay: function(isChecke) {
-      console.log(this.model);
+    changeReadingOfTheDay: function() {
       this.model.set('readOfTheDay',true);
       this.model.save();
-      console.log('foi');
     }
   }
 

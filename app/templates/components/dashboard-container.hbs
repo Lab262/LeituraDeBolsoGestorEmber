@@ -4,9 +4,17 @@
   action='registerNewReading'
   class="register-button"}}
 {{searchbar-container}}
-{{collection-view-container model=model}}
+{{collection-view-container model=model editReadingAction=(action "editAReading")}}
 
-    {{register-reading-modal closeModalAction=(action closeModal) isNewReading=readingFormModal.isNewReading class="register-reading-modal"}}
+    {{register-reading-modal
+      id='register-reading-modal'
+      closeModalAction=(action closeModal)
+      isNewReading=isNewReading
+      class="register-reading-modal"
+      content=readingInFocus.content
+      title=readingInFocus.title
+      authorName=readingInFocus.authorName
+    readOfTheDay=readingInFocus.readOfTheDay}}
 
 
 </div>

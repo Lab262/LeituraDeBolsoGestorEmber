@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import DS from 'ember-data';
 
 export default Ember.Component.extend({
 
@@ -8,22 +7,29 @@ export default Ember.Component.extend({
   store: Ember.inject.service(),
 
   readingTimeInMinutes: Ember.computed('readingTypes','readingSelectedType','content', function() {
-    let readingTypes = this.get('readingTypes')
-    let readingSelectedType = (this.get('readingSelectedType') != null ? this.get('readingSelectedType') : "Leitura lenta (100 palavras/minuto)")
-    let readingContent = (this.get('content') != null ? this.get('content') : " ")
-    let numberOfWordsInReading = this.countWords(readingContent)
+    let readingTypes = this.get('readingTypes');
+    let readingSelectedType = (this.get('readingSelectedType') != null ? this.get('readingSelectedType') : "Leitura lenta (100 palavras/minuto)");
+    let readingContent = (this.get('content') != null ? this.get('content') : " ");
+    let numberOfWordsInReading = this.countWords(readingContent);
 
     switch(readingTypes.indexOf(readingSelectedType)) {
       case 0:
-      return this.calcReadingTime(100,numberOfWordsInReading)
+      return this.calcReadingTime(100,numberOfWordsInReading);
 
       case 1:
-      return this.calcReadingTime(130,numberOfWordsInReading)
+      return this.calcReadingTime(130,numberOfWordsInReading);
 
       case 2:
-      return this.calcReadingTime(160,numberOfWordsInReading)
+      return this.calcReadingTime(160,numberOfWordsInReading);
     }
   }),
+  //
+  // contentObserver: Ember.observer('content', function() {
+  //   const errors = this.get('errors');
+  //   errors.set('content', []);
+  //    $('#textarea1').trigger('autoresize');
+  //   // console.log(this.get('title'))
+  // }),
 
   countWords(string){
     string = string.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
@@ -35,14 +41,13 @@ export default Ember.Component.extend({
   calcReadingTime(wordPerMinute, numberOfWordsInReading) {
     let readingTime = Math.round( ( (numberOfWordsInReading * 60) / wordPerMinute ) / 60 );
 
-    if (readingTime == 0) {
+    if (readingTime === 0) {
 
       readingTime = 1;
     }
 
     return readingTime;
   },
-
   clearForm() {
     this.set('title',"");
     this.set('authorName',"");
@@ -57,7 +62,7 @@ export default Ember.Component.extend({
 
     if (object == null || !object.trim()) {
       errors.set(value,['Campo necessário']);
-      alert(value + ' é um campo obrigatório')
+      alert(value + ' é um campo obrigatório');
       return false;
     } else {
       errors.set(value,null);
@@ -68,8 +73,8 @@ export default Ember.Component.extend({
   actions: {
 
     closeModal() {
-      this.clearForm()
-      this.closeModalAction()
+      this.clearForm();
+      this.closeModalAction();
 
     },
 
@@ -85,7 +90,7 @@ export default Ember.Component.extend({
       validFieldsCount += this.validateField(title,'Título');
       validFieldsCount += this.validateField(authorName,'Autor');
       validFieldsCount += this.validateField(content,'Conteúdo');
-
+      console.log(validFieldsCount)
       if (validFieldsCount < 3) {
         return;
       }
@@ -100,8 +105,8 @@ export default Ember.Component.extend({
 
      newReading.save();
 
-      this.clearForm()
-      this.closeModalAction()
+      this.clearForm();
+      this.closeModalAction();
     }
 
   }

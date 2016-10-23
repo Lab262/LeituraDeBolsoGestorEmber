@@ -47,6 +47,17 @@ $line-height: 1.4;
     font-size: 18px;
   }
 
+  .reading-item-time {
+    @extend %extended_padding;
+    height: 10%;
+    color: black;
+    font-size: 14px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+  }
+
   .reading-item-author {
     @extend %extended_padding;
     height: 10%;
@@ -63,7 +74,7 @@ $line-height: 1.4;
     height: 65%;
 
     span{
-      -webkit-line-clamp: 11;
+      -webkit-line-clamp: 10;
       @extend %extended_linebreak;
     }
     // white-space: nowrap;
