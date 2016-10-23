@@ -1,0 +1,57 @@
+
+.reading-detail {
+
+  text-align: left;
+  color: black;
+
+  %extended_padding {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  };
+
+  %extended_linebreak {
+    max-width: 100%;
+      display: block; /* Fallback for non-webkit */
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+  }
+
+  .reading-detail-item-title {
+    @extend %extended_padding;
+    @extend %extended_linebreak;
+    font-size: 18px;
+  }
+
+  .reading-detail-item-time {
+    @extend %extended_padding;
+    color: black;
+    font-size: 14px;
+
+  }
+
+  .reading-detail-item-author {
+    @extend %extended_padding;
+    color: gray;
+    font-size: 14px;
+
+  }
+
+  .reading-detail-item-content {
+    @extend %extended_padding;
+
+    span{
+      @extend %extended_linebreak;
+    }
+    // white-space: nowrap;
+  }
+
+  .reading-detail-checkbox {
+    color: black;
+    // position: absolute;
+    padding-top: 15px;
+    // transform: translateY(-50%);
+  }
+
+}

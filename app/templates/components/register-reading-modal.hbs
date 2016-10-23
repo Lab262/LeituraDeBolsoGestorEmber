@@ -1,4 +1,4 @@
-<div id="reading-form-modal" class="modal modal-fixed-footer">
+<div  id="reading-form-modal" class="modal modal-fixed-footer" >
   <div class="modal-content" id="modal-content">
 
     {{md-input
@@ -6,7 +6,6 @@
       label='Título'
       class="field"
       validate=false
-      disabled=(not isNewReading)
       errors=errors.title}}
 
       {{md-input
@@ -14,7 +13,6 @@
         label='Autor'
         class="field"
         validate=false
-        disabled=(not isNewReading)
         errors=errors.authorName}}
 
         {{md-textarea
@@ -22,14 +20,8 @@
           value=content
           class="text-area"
           validate=false
-          disabled=(not isNewReading)
           errors=errors.content
           length="10000"}}
-
-          {{!-- <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea "> </textarea>
-                    <label for="textarea1" >Conteúdo</label>
-                  </div> --}}
 
           {{md-select
             id="md-select"
@@ -51,16 +43,13 @@
                name="Leitura do dia"
                checked=readOfTheDay
                value=readOfTheDay
-               disabled=(not isNewReading)
                class="checkbox"
              }}
 
 
           </div>
           <div class="modal-footer">
-            {{#if isNewReading}}
             <a href="#!" class="modal-action submit-form waves-effect waves-green btn-flat" {{action "submitForm"}}>Cadastrar</a>
-            {{/if}}
             <a href="#!" class="modal-action close-modal waves-effect waves-green btn-flat" {{action "closeModal"}}>Cancelar</a>
 
           </div>

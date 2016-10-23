@@ -1,20 +1,26 @@
 
 <div class="dashboard-container">
+
   {{md-btn text='Cadastrar nova leitura'
   action='registerNewReading'
   class="register-button"}}
+
 {{searchbar-container}}
+
 {{collection-view-container model=model editReadingAction=(action "editAReading")}}
 
-    {{register-reading-modal
-      id='register-reading-modal'
-      closeModalAction=(action closeModal)
-      isNewReading=isNewReading
-      class="register-reading-modal"
-      content=readingInFocus.content
-      title=readingInFocus.title
-      authorName=readingInFocus.authorName
-    readOfTheDay=readingInFocus.readOfTheDay}}
 
+{{!-- Modals --}}
+    {{register-reading-modal
+      closeModalAction=(action closeModal)
+      class="register-reading-modal"
+  }}
+
+  {{reading-detail
+    id='reading-detail'
+    closeModalAction=(action closeModal)
+    class="reading-detail"
+    reading=readingInFocus
+}}
 
 </div>

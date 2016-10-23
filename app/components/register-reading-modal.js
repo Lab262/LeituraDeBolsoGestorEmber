@@ -23,13 +23,6 @@ export default Ember.Component.extend({
       return this.calcReadingTime(160,numberOfWordsInReading);
     }
   }),
-  //
-  // contentObserver: Ember.observer('content', function() {
-  //   const errors = this.get('errors');
-  //   errors.set('content', []);
-  //    $('#textarea1').trigger('autoresize');
-  //   // console.log(this.get('title'))
-  // }),
 
   countWords(string){
     string = string.replace(/(^\s*)|(\s*$)/gi,"");//exclude  start and end white-space
@@ -90,7 +83,6 @@ export default Ember.Component.extend({
       validFieldsCount += this.validateField(title,'Título');
       validFieldsCount += this.validateField(authorName,'Autor');
       validFieldsCount += this.validateField(content,'Conteúdo');
-      console.log(validFieldsCount)
       if (validFieldsCount < 3) {
         return;
       }
