@@ -5,22 +5,23 @@
       value=title
       label='Título'
       class="field"
-      validate=true
+      validate=false
       errors=errors.title}}
 
       {{md-input
-        value=author
+        value=authorName
         label='Autor'
         class="field"
-        validate=true
-        errors=errors.author}}
+        validate=false
+        errors=errors.authorName}}
 
         {{md-textarea
           label='Conteúdo'
           value=content
           class="text-area"
-          validate=true
-          errors=errors.content}}
+          validate=false
+          errors=errors.content
+          length="10000"}}
 
           {{md-select
             content=readingTypes
@@ -31,12 +32,12 @@
             selection="changeReadingType"}}
 
             <div class="reading-time">
-              Tempo de leitura
-              <div class="reading-time-value">{{readingTime}} segundos</div>
+              Tempo de leitura:
+              <div class="reading-time-value"> {{readingTimeInMinutes}} min</div>
             </div>
 
 
-            {{md-check name="Leitura do dia" checked=model.readOfTheDay class="checkbox"}}
+            {{md-check name="Leitura do dia" checked=readOfTheDay class="checkbox"}}
 
 
           </div>

@@ -2,13 +2,27 @@
 .register-reading-modal {
   color: gray;
   text-align: left;
+
+
   .modal {
     // background-color: blue;
-
     .modal-content {
+      .reading-time {
+        display: flex;
+        flex-direction: row;
+        padding-bottom: 15px;
 
+        .reading-time-value {
+          padding-left: 5px;
+          padding-top: 1px;
+          font:  bold 15px Arial;
+        }
 
+      }
 
+      .checkbox {
+        padding-bottom: 15px;
+      }
     }
 
     .modal-footer{
