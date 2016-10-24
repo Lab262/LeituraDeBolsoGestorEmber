@@ -4,7 +4,6 @@ export default Ember.Component.extend({
 
   readOfTheDayDidChange: Ember.observer('model.readOfTheDay', function() {
   // deal with the change
-    let change = this.model.get('readOfTheDay');
     this.model.save();
   }),
 
