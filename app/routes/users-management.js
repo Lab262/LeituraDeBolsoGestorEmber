@@ -1,14 +1,19 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
+  query: "",
+
   model() {
-    return this.store.findAll('user');
+    var queryExpressions = { email: { "$regex": this.query, "$options": "i" }  };
+    return this.store.query('user', queryExpressions);
   },
 
   actions: {
     search(query) {
-      console.log(query);
+      this.query = query;
+      this.refresh();
     }
   }
-  
+
 });
