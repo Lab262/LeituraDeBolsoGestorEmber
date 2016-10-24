@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('route:read-time-calc', 'Unit | Route | read time calc', {
+moduleFor('route:users-management', 'Unit | Route | users management', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });

@@ -5,7 +5,7 @@
   <div class="reading-item-author"> {{model.authorName}} </div>
   <div class="reading-item-content"> <span> {{model.content}} </span></div>
   <div class="reading-item-actions">
-    {{md-check name="Leitura do dia" checked=model.readOfTheDay class="checkbox" action='changeReadingOfTheDay'}}
+    {{md-check name="Leitura do dia" checked=model.readOfTheDay class="checkbox" }}
     <button {{action "deleteReading"}}  class="delete-button">Deletar</button>
     {{md-btn action='editReading'  class='card-item-select-button' }}
   </div>

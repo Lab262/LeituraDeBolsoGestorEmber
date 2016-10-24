@@ -2,6 +2,12 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+  readOfTheDayDidChange: Ember.observer('model.readOfTheDay', function() {
+  // deal with the change
+    let change = this.model.get('readOfTheDay');
+    this.model.save();
+  }),
+
   actions: {
     editReading: function() {
 
@@ -12,12 +18,8 @@ export default Ember.Component.extend({
       if (confirm('Você tem certeza que quer deletar essa leitura???')) {
         this.model.destroyRecord();
       }
-    },
-
-    changeReadingOfTheDay: function() {
-      this.model.set('readOfTheDay',true);
-      this.model.save();
     }
+
   }
 
 });

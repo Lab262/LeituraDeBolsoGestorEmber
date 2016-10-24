@@ -15,7 +15,7 @@ Router.map(function() {
     path: '/'
   });
   this.route('login');
-  this.route('read-time-calc');
+  this.route('users-management');
 });
 
 
