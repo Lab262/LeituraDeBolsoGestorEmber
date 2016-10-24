@@ -56,7 +56,7 @@ module.exports = function(environment) {
 
   }
 
-  if (environment === 'stagging') {
+  if (environment === 'staging') {
     ENV.apiBaseUrl = 'https://leituradebolso-stagging.herokuapp.com'
 
   }

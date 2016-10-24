@@ -3,13 +3,6 @@ cache:
   paths:
   - node_modules/
 
-before_script:
-  - npm cache clean
-  - bower --allow-root cache clean
-  - rm -rf node_modules bower_components dist tmp
-  - npm install
-  - bower --allow-root install
-
 production:
   type: deploy
   script:
