@@ -1,0 +1,32 @@
+.users-management-container {
+  display: block;
+  margin-left: 5%;
+  width: 90%;
+  height: auto;
+
+  .register-button {
+    margin: 25px;
+  }
+
+  .users-collection {
+
+    width: 100%;
+    height: auto;
+
+    .user-row {
+      .collection-item {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+
+        text-align: left;
+        color: gray;
+
+      }
+
+    }
+
+  }
+
+
+}
