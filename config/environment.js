@@ -52,12 +52,12 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiBaseUrl = 'https://leituradebolso-production.herokuapp.com'
+    ENV.apiBaseUrl = 'https://leituradebolso-production.herokuapp.com/api'
 
   }
 
   if (environment === 'staging') {
-    ENV.apiBaseUrl = 'https://leituradebolso-stagging.herokuapp.com'
+    ENV.apiBaseUrl = 'https://leituradebolso-stagging.herokuapp.com/api'
 
   }
 
