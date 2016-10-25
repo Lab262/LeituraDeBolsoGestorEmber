@@ -34,7 +34,9 @@ export default Ember.Component.extend({
       this.set('isLoading', true);
       const { email, password } = this.getProperties('email','password');
       this.get('authManager').authenticate('authenticator:jwt',email, password).then(() => {
+
       }, (err) => {
+        
         const errors = this.get('errors');
         this.set('isLoading', false);
         var errorObject = err.responseJSON.errors[0];

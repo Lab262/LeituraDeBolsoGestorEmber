@@ -68,7 +68,7 @@ export default Ember.Component.extend({
 
     closeModal() {
       this.clearForm();
-      this.closeModalAction();
+      this.closeModalAction('#reading-form-modal');
 
     },
 
@@ -99,7 +99,7 @@ export default Ember.Component.extend({
      newReading.save();
 
       this.clearForm();
-      this.closeModalAction();
+      this.closeModalAction('#reading-form-modal');
     }
 
   }

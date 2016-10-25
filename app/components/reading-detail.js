@@ -5,7 +5,7 @@ export default Ember.Component.extend({
   actions: {
 
     closeModal() {
-      this.closeModalAction();
+      this.closeModalAction('#reading-detail-modal');
 
     }
   }

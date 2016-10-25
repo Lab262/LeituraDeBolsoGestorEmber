@@ -1,8 +1,7 @@
 import Ember from 'ember';
-import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 import InfinityRoute from "ember-infinity/mixins/route";
 
-export default Ember.Route.extend(InfinityRoute,AuthenticatedRouteMixin, {
+export default Ember.Route.extend(InfinityRoute, {
 
   query: "",
   perPageParam: "limit",              // instead of "per_page"
@@ -13,7 +12,7 @@ export default Ember.Route.extend(InfinityRoute,AuthenticatedRouteMixin, {
 
     let regex = { "$regex": this.query, "$options": "i" };
     var queryExpressions = {
-      perPage: 6,
+      perPage: 12,
       startingPage: 1,
       $or:[
         {title:regex},

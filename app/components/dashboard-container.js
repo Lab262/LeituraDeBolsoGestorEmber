@@ -4,10 +4,8 @@ export default Ember.Component.extend({
 
   readingInFocus: null,
 
-  closeModal() {
-    this.$('#reading-form-modal').closeModal();
-    this.$('#reading-detail-modal').closeModal();
-
+  closeModal(tag) {
+    this.$(tag).closeModal();
   },
 
   actions: {
