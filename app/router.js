@@ -15,7 +15,10 @@ Router.map(function() {
     path: '/'
   });
   this.route('login');
-  this.route('users-management');
+  this.route('users-management', {
+    path: '/users'
+  });
+  this.route('emojis');
 });
 
 

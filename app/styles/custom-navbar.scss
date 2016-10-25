@@ -18,7 +18,7 @@ $items-padding-height: 3%;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
-	background: rgba(0,0,0,0.75);
+	background: rgba(0,0,0,1);
 	justify-content: space-between;
   margin-top: 0;
 
@@ -34,7 +34,7 @@ $items-padding-height: 3%;
       background: rgba(0,0,0,0);
       border: none;
 			color: $font-color;
-			
+
 			&:hover {
 				background: rgba(255,255,255,0.75);
 				color: black;
